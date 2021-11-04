@@ -1,4 +1,5 @@
+*.slxc
+slprj/
 
 Gaussian Process Dynamic Model/NARX MPC/exampleCasadiIpopt.py
-
 Gaussian Process Dynamic Model/NARX MPC/gpy_kernel_cheatsheet.py

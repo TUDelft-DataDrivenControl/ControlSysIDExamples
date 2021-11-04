@@ -23,9 +23,9 @@ F.HPF = s/(s+F.wcHPF);
 F.LPF = F.wcLPF/(s+F.wcLPF);
 
 a = sim('ExtremumSeekingControlExample', T);
-b = a.get('simout');
+b = a.get('ESC');
 assignin('base','b',b);
-simout = b;
+ESC = b;
 clear a b
 
 %% Plot result
@@ -40,10 +40,10 @@ vline(D_w), subplot(211), vline(D_w)
 sgtitle('ESC - Filter and frequency design', 'Interpreter', 'latex') 
 legend('High-pass filter', 'Low-pass filter')
 
-P.t = simout.Time;
-P.u = simout.Data(:,1);
-P.K = simout.Data(:,2);
-P.y = simout.Data(:,3);
+P.t = ESC.Time;
+P.u = ESC.Data(:,1);
+P.K = ESC.Data(:,2);
+P.y = ESC.Data(:,3);
 P.N = length(P.t);
 
 figure(2)
