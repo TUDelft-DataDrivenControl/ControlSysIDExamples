@@ -11,7 +11,7 @@ D_A = 1; % Dither aplimtude [-]
 
 M_w = D_w; % Demodulation frequency [rad/s]
 M_A = 2/D_A; % Demodulation amplitude [-]
-M_phi = 0/180*pi; % Demodulation phase offset [rad]
+M_phi = 30/180*pi; % Demodulation phase offset [rad]
 
 w_A = 0.5; % Disturbance amplitude
 
