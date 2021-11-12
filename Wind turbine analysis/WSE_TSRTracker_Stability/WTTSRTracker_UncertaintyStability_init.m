@@ -31,7 +31,7 @@ T.Cq = T.Cp./TSRMesh;
 
 % Find maximum Cp and corresponding TSR
 T.CpMax = max(max(T.Cp));
-[iCpBetaOpt, iCpTSROpt] = find(T.Cp == T.CpMax);
+[iCpTSROpt, iCpBetaOpt] = find(T.Cp == T.CpMax);
 T.TSROpt = T.CTSR(iCpTSROpt);
 T.betaOpt = T.CPitch(iCpBetaOpt);
 
@@ -44,7 +44,7 @@ WSE_Kp = 10;
 WSE_Ki = 1;
 
 %% Undertainty in Cp-table
-CpUncertaintyFactor = 1.0;
+CpUncertaintyFactor = 1;
 
 %% Simulate
 open_system(simmdl)
